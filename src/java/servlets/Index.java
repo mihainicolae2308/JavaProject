@@ -50,16 +50,17 @@ public class Index extends HttpServlet {
         ResultSet resultSet = null;
         Statement statement = null;
         Connection connection = null;
-        String user = "ebooksstore" ;
-        String password = "ebooksstore";
-        String url = "jdbc:derby://localhost:1527/ebooksstore;create=true;";
-        String driver = "org.apache.derby.jdbc.ClientDriver40";
+        String url = "jdbc:derby://localhost:1527/firstdb";
+        String user = "Mihai";
+        String password = "12";
+        String driver = "org.apache.derby.jdbc.ClientDriver";
         try
         {
             Class driverClass = Class.forName(driver);
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            String query = "SELECT USERNAME, PASSWORD, ROLE FROM EBOOKSSTORE_USERS WHERE USERNAME = '"+u+"' AND PASSWORD = '"+p+"'";
+            String query = "SELECT SSN, USERNAME, ROLE FROM USERS WHERE USERNAME = '"+u+"' AND SSN = '"+p+"'";
+            System.out.println(query);
             resultSet = statement.executeQuery(query);
             boolean resultSetHasRows = resultSet.next(); 
             if (resultSetHasRows)

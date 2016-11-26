@@ -28,6 +28,10 @@
         <servlet-name>eBooksStoreAdminEBooks</servlet-name>
         <servlet-class>servlets.eBooksStoreAdminEBooks</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>eBooksStoreMenu</servlet-name>
+        <servlet-class>servlets.eBooksStoreMenu</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>eBooksStoreAdminPaperQualityServlet</servlet-name>
         <url-pattern>/eBooksStoreAdminPaperQualityServlet</url-pattern>
@@ -51,6 +55,10 @@
     <servlet-mapping>
         <servlet-name>eBooksStoreAdminEBooks</servlet-name>
         <url-pattern>/eBooksStoreAdminEBooks</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>eBooksStoreMenu</servlet-name>
+        <url-pattern>/eBooksStoreMenu</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
